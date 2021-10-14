@@ -63,7 +63,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IRP-Hx-GyR">
+                            <button opaque="NO" alpha="0.5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IRP-Hx-GyR">
                                 <rect key="frame" x="57" y="84" width="300" height="40"/>
                                 <color key="backgroundColor" name="AccentColor"/>
                                 <constraints>
@@ -75,8 +75,11 @@
                                     <fontDescription key="titleFontDescription" type="system" weight="medium" pointSize="17"/>
                                     <color key="baseForegroundColor" red="1" green="0.99576288420000003" blue="0.97519723820000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="ballYesTap:" destination="51Y-LI-36H" eventType="touchUpInside" id="4iF-mC-uIh"/>
+                                </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K6b-Fp-Hj5">
+                            <button opaque="NO" alpha="0.5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K6b-Fp-Hj5">
                                 <rect key="frame" x="57" y="154" width="300" height="40"/>
                                 <color key="backgroundColor" name="AccentColor"/>
                                 <constraints>
@@ -88,8 +91,11 @@
                                     <fontDescription key="titleFontDescription" type="system" weight="medium" pointSize="17"/>
                                     <color key="baseForegroundColor" red="1" green="0.99576288420000003" blue="0.97519723820000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="ballDoesntTap:" destination="51Y-LI-36H" eventType="touchUpInside" id="lki-t6-APH"/>
+                                </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vzz-gF-e00">
+                            <button opaque="NO" alpha="0.5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vzz-gF-e00">
                                 <rect key="frame" x="57" y="224" width="300" height="40"/>
                                 <color key="backgroundColor" name="AccentColor"/>
                                 <constraints>
@@ -101,8 +107,11 @@
                                     <fontDescription key="titleFontDescription" type="system" weight="medium" pointSize="17"/>
                                     <color key="baseForegroundColor" red="1" green="0.99576288420000003" blue="0.97519723820000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="ballNotWorthTap:" destination="51Y-LI-36H" eventType="touchUpInside" id="gwH-8a-l41"/>
+                                </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O3v-rf-M3f">
+                            <button opaque="NO" alpha="0.5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O3v-rf-M3f">
                                 <rect key="frame" x="57" y="294" width="300" height="40"/>
                                 <color key="backgroundColor" name="AccentColor"/>
                                 <constraints>
@@ -114,6 +123,9 @@
                                     <fontDescription key="titleFontDescription" type="system" weight="medium" pointSize="17"/>
                                     <color key="baseForegroundColor" red="1" green="0.99576288420000003" blue="0.97519723820000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="ballDoItTap:" destination="51Y-LI-36H" eventType="touchUpInside" id="Lyg-mh-D3V"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Choose additional answers" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ywO-Iz-uKJ">
                                 <rect key="frame" x="80.5" y="30" width="253" height="24"/>
@@ -125,7 +137,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vst-Li-N1O">
+                            <button opaque="NO" alpha="0.5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vst-Li-N1O">
                                 <rect key="frame" x="57" y="364" width="300" height="40"/>
                                 <color key="backgroundColor" name="AccentColor"/>
                                 <constraints>
@@ -137,6 +149,9 @@
                                     <fontDescription key="titleFontDescription" type="system" weight="medium" pointSize="17"/>
                                     <color key="baseForegroundColor" red="1" green="0.99576288420000003" blue="0.97519723820000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="ballChangeMindTap:" destination="51Y-LI-36H" eventType="touchUpInside" id="bgP-xb-DKm"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6vf-OE-k5o"/>
@@ -156,6 +171,13 @@
                             <constraint firstItem="vzz-gF-e00" firstAttribute="top" secondItem="K6b-Fp-Hj5" secondAttribute="bottom" constant="30" id="vzq-7K-3Dl"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="ballChangeMind" destination="Vst-Li-N1O" id="xWO-kO-El9"/>
+                        <outlet property="ballDoIt" destination="O3v-rf-M3f" id="TA6-at-iI5"/>
+                        <outlet property="ballDoesnt" destination="K6b-Fp-Hj5" id="e1X-dc-UJC"/>
+                        <outlet property="ballNotWorth" destination="vzz-gF-e00" id="qHw-bx-CwK"/>
+                        <outlet property="ballYes" destination="IRP-Hx-GyR" id="7vr-eC-nOL"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WH5-aK-l96" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
