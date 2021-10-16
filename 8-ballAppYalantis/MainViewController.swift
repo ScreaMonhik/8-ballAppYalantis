@@ -1,8 +1,8 @@
 //
-//  ViewController.swift
+//  MainViewController.swift
 //  8-ballAppYalantis
 //
-//  Created by Dima Sunko on 13.10.2021.
+//  Created by Dima Sunko on 16.10.2021.
 //
 
 import UIKit
@@ -17,7 +17,7 @@ struct MagicAnswer: Codable {
     var magic: Answer
 }
 
-class ViewController: UIViewController {
+class MainViewController: UIViewController {
     
     let decoder = JSONDecoder()
     var labelText = String()
@@ -55,7 +55,8 @@ class ViewController: UIViewController {
     }
     
     override func motionCancelled(_ motion: UIEvent.EventSubtype, with event: UIEvent?) {
-        answerLabel.text = "Cancelled"
+        answerLabel.text = "Shake cancelled"
     }
     
 }
+
