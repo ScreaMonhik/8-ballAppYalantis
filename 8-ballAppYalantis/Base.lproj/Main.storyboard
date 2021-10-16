@@ -17,7 +17,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Shake the phone and receive an answer!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FB2-jW-aaL">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FB2-jW-aaL">
                                 <rect key="frame" x="57" y="435" width="300" height="80"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="80" id="dXX-J6-pNC"/>
@@ -66,69 +66,41 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" alpha="0.5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IRP-Hx-GyR">
+                            <button opaque="NO" alpha="0.5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IRP-Hx-GyR" customClass="AnswerButton" customModule="__ballAppYalantis" customModuleProvider="target">
                                 <rect key="frame" x="57" y="84" width="300" height="40"/>
                                 <color key="backgroundColor" name="AccentColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="EHO-B7-f8l"/>
                                     <constraint firstAttribute="width" constant="300" id="Ilj-Wp-Te5"/>
                                 </constraints>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Ball says yes">
-                                    <fontDescription key="titleFontDescription" type="system" weight="medium" pointSize="17"/>
-                                    <color key="baseForegroundColor" red="1" green="0.99576288420000003" blue="0.97519723820000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </buttonConfiguration>
-                                <connections>
-                                    <action selector="ballYesTap:" destination="51Y-LI-36H" eventType="touchUpInside" id="4iF-mC-uIh"/>
-                                </connections>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                             </button>
-                            <button opaque="NO" alpha="0.5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K6b-Fp-Hj5">
+                            <button opaque="NO" alpha="0.5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K6b-Fp-Hj5" customClass="AnswerButton" customModule="__ballAppYalantis" customModuleProvider="target">
                                 <rect key="frame" x="57" y="154" width="300" height="40"/>
                                 <color key="backgroundColor" name="AccentColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="Zen-f5-Fr5"/>
                                     <constraint firstAttribute="width" constant="300" id="k8x-ns-06t"/>
                                 </constraints>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Ball doesn't like it">
-                                    <fontDescription key="titleFontDescription" type="system" weight="medium" pointSize="17"/>
-                                    <color key="baseForegroundColor" red="1" green="0.99576288420000003" blue="0.97519723820000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </buttonConfiguration>
-                                <connections>
-                                    <action selector="ballDoesntTap:" destination="51Y-LI-36H" eventType="touchUpInside" id="lki-t6-APH"/>
-                                </connections>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                             </button>
-                            <button opaque="NO" alpha="0.5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vzz-gF-e00">
+                            <button opaque="NO" alpha="0.5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vzz-gF-e00" customClass="AnswerButton" customModule="__ballAppYalantis" customModuleProvider="target">
                                 <rect key="frame" x="57" y="224" width="300" height="40"/>
                                 <color key="backgroundColor" name="AccentColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="YYP-eT-ay8"/>
                                     <constraint firstAttribute="width" constant="300" id="h94-B2-Xu8"/>
                                 </constraints>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Totally not worth It!">
-                                    <fontDescription key="titleFontDescription" type="system" weight="medium" pointSize="17"/>
-                                    <color key="baseForegroundColor" red="1" green="0.99576288420000003" blue="0.97519723820000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </buttonConfiguration>
-                                <connections>
-                                    <action selector="ballNotWorthTap:" destination="51Y-LI-36H" eventType="touchUpInside" id="gwH-8a-l41"/>
-                                </connections>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                             </button>
-                            <button opaque="NO" alpha="0.5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O3v-rf-M3f">
+                            <button opaque="NO" alpha="0.5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O3v-rf-M3f" customClass="AnswerButton" customModule="__ballAppYalantis" customModuleProvider="target">
                                 <rect key="frame" x="57" y="294" width="300" height="40"/>
                                 <color key="backgroundColor" name="AccentColor"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="300" id="eIR-8x-0Qs"/>
                                     <constraint firstAttribute="height" constant="40" id="zDF-Gp-plh"/>
                                 </constraints>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Just do it!">
-                                    <fontDescription key="titleFontDescription" type="system" weight="medium" pointSize="17"/>
-                                    <color key="baseForegroundColor" red="1" green="0.99576288420000003" blue="0.97519723820000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </buttonConfiguration>
-                                <connections>
-                                    <action selector="ballDoItTap:" destination="51Y-LI-36H" eventType="touchUpInside" id="Lyg-mh-D3V"/>
-                                </connections>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Choose additional answers" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ywO-Iz-uKJ">
                                 <rect key="frame" x="80.5" y="30" width="253" height="24"/>
@@ -140,21 +112,14 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" alpha="0.5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vst-Li-N1O">
+                            <button opaque="NO" alpha="0.5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vst-Li-N1O" customClass="AnswerButton" customModule="__ballAppYalantis" customModuleProvider="target">
                                 <rect key="frame" x="57" y="364" width="300" height="40"/>
                                 <color key="backgroundColor" name="AccentColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="eBb-Lp-ZK7"/>
                                     <constraint firstAttribute="width" constant="300" id="jHu-El-bjc"/>
                                 </constraints>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Change your mind">
-                                    <fontDescription key="titleFontDescription" type="system" weight="medium" pointSize="17"/>
-                                    <color key="baseForegroundColor" red="1" green="0.99576288420000003" blue="0.97519723820000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </buttonConfiguration>
-                                <connections>
-                                    <action selector="ballChangeMindTap:" destination="51Y-LI-36H" eventType="touchUpInside" id="bgP-xb-DKm"/>
-                                </connections>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6vf-OE-k5o"/>
@@ -175,11 +140,11 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="ballChangeMind" destination="Vst-Li-N1O" id="xWO-kO-El9"/>
-                        <outlet property="ballDoIt" destination="O3v-rf-M3f" id="TA6-at-iI5"/>
-                        <outlet property="ballDoesnt" destination="K6b-Fp-Hj5" id="e1X-dc-UJC"/>
-                        <outlet property="ballNotWorth" destination="vzz-gF-e00" id="qHw-bx-CwK"/>
-                        <outlet property="ballYes" destination="IRP-Hx-GyR" id="7vr-eC-nOL"/>
+                        <outletCollection property="buttons" destination="O3v-rf-M3f" collectionClass="NSMutableArray" id="90b-im-4DR"/>
+                        <outletCollection property="buttons" destination="vzz-gF-e00" collectionClass="NSMutableArray" id="b1d-J9-ZeV"/>
+                        <outletCollection property="buttons" destination="K6b-Fp-Hj5" collectionClass="NSMutableArray" id="NxS-Fx-Gmt"/>
+                        <outletCollection property="buttons" destination="IRP-Hx-GyR" collectionClass="NSMutableArray" id="VfT-bh-IHa"/>
+                        <outletCollection property="buttons" destination="Vst-Li-N1O" collectionClass="NSMutableArray" id="hFA-yi-gEp"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WH5-aK-l96" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

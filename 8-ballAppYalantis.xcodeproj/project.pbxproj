@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 55;
+	objectVersion = 53;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -14,6 +14,7 @@
 		265F443E2716E3C0008EB4BB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 265F443D2716E3C0008EB4BB /* Assets.xcassets */; };
 		265F44412716E3C0008EB4BB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 265F443F2716E3C0008EB4BB /* LaunchScreen.storyboard */; };
 		265F44492716EFE6008EB4BB /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 265F44482716EFE6008EB4BB /* SettingsViewController.swift */; };
+		2665F7B9271B19E7008C13A6 /* AnswerButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2665F7B8271B19E7008C13A6 /* AnswerButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		265F44402716E3C0008EB4BB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		265F44422716E3C0008EB4BB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		265F44482716EFE6008EB4BB /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		2665F7B8271B19E7008C13A6 /* AnswerButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnswerButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +64,7 @@
 				265F44362716E3BF008EB4BB /* SceneDelegate.swift */,
 				2606B3E7271AC776008A41F5 /* MainViewController.swift */,
 				265F44482716EFE6008EB4BB /* SettingsViewController.swift */,
+				2665F7B8271B19E7008C13A6 /* AnswerButton.swift */,
 				265F443A2716E3BF008EB4BB /* Main.storyboard */,
 				265F443D2716E3C0008EB4BB /* Assets.xcassets */,
 				265F443F2716E3C0008EB4BB /* LaunchScreen.storyboard */,
@@ -106,7 +109,7 @@
 				};
 			};
 			buildConfigurationList = 265F442C2716E3BF008EB4BB /* Build configuration list for PBXProject "8-ballAppYalantis" */;
-			compatibilityVersion = "Xcode 13.0";
+			compatibilityVersion = "Xcode 11.4";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -141,6 +144,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2665F7B9271B19E7008C13A6 /* AnswerButton.swift in Sources */,
 				265F44352716E3BF008EB4BB /* AppDelegate.swift in Sources */,
 				265F44372716E3BF008EB4BB /* SceneDelegate.swift in Sources */,
 				265F44492716EFE6008EB4BB /* SettingsViewController.swift in Sources */,

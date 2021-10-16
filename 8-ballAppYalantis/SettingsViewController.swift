@@ -7,88 +7,34 @@
 
 import UIKit
 
+enum BallAnswers: String, CaseIterable {
+    case answer1 = "Ball says yes"
+    case answer2 = "Ball doesn't like it"
+    case answer3 = "Totally not worth it!"
+    case answer4 = "Just do it!"
+    case answer5 = "Change your mind"
+}
+
 class SettingsViewController: UIViewController {
 
     // MARK: - Outlets
-    
-    @IBOutlet weak var ballYes: UIButton!
-    @IBOutlet weak var ballDoesnt: UIButton!
-    @IBOutlet weak var ballNotWorth: UIButton!
-    @IBOutlet weak var ballDoIt: UIButton!
-    @IBOutlet weak var ballChangeMind: UIButton!
-    
-    var testArray = [String]()
+    @IBOutlet var buttons: [AnswerButton]!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        ballYes.layer.cornerRadius = 10
-        ballDoesnt.layer.cornerRadius = 10
-        ballDoIt.layer.cornerRadius = 10
-        ballNotWorth.layer.cornerRadius = 10
-        ballChangeMind.layer.cornerRadius = 10
-        
-        testButtonSave(buttonName: ballYes)
-        testButtonSave(buttonName: ballDoesnt)
-        testButtonSave(buttonName: ballDoIt)
-        testButtonSave(buttonName: ballNotWorth)
-        testButtonSave(buttonName: ballChangeMind)
-        
-        
+        setupButtons()
     }
     
     // MARK: - Actions
-    
-    @IBAction func ballYesTap(_ sender: Any) {
-        buttonStatementChange(buttonName: ballYes)
-    }
-    
-    @IBAction func ballDoesntTap(_ sender: Any) {
-        buttonStatementChange(buttonName: ballDoesnt)
-    }
-    
-    @IBAction func ballNotWorthTap(_ sender: Any) {
-        buttonStatementChange(buttonName: ballNotWorth)
-    }
-    
-    @IBAction func ballDoItTap(_ sender: Any) {
-        buttonStatementChange(buttonName: ballDoIt)
-    }
-    
-    @IBAction func ballChangeMindTap(_ sender: Any) {
-        buttonStatementChange(buttonName: ballChangeMind)
-    }
-    
+    @objc private func didTapButton(_ sender: AnswerButton) { sender.isSelected = !sender.isSelected }
     
     // MARK: - Functions
-    func buttonStatementChange(buttonName: UIButton) {
-        
-        if buttonName.alpha == 0.5 {
-            DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) {
-                buttonName.alpha = 1
-                self.testArray.append((buttonName.titleLabel?.text)!)
-                print(self.testArray)
-            }
-        } else {
-                buttonName.alpha = 0.5
-        
-            for i in testArray {
-                if i == buttonName.titleLabel?.text {
-                    testArray = testArray.filter(){$0 != i}
-                }
-            }
-        }
-        
-    }
-    
-    func testButtonSave(buttonName: UIButton) {
-        for i in testArray {
-            if i == buttonName.titleLabel?.text {
-                buttonName.alpha = 1
-            }
+    private func setupButtons() {
+        for count in 0..<buttons.count {
+            buttons[count].setTitle(BallAnswers.allCases[count].rawValue, for: .normal)
+            buttons[count].titleLabel?.font = UIFont.systemFont(ofSize: 18, weight: .medium)
+            buttons[count].layer.cornerRadius = 10
+            buttons[count].addTarget(self, action: #selector(didTapButton), for: .touchUpInside)
         }
     }
-    
-    
-    
 }
