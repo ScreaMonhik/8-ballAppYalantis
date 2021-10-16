@@ -50,6 +50,9 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="vLQ-ff-pU2"/>
+                    <connections>
+                        <outlet property="answerLabel" destination="FB2-jW-aaL" id="e0k-J2-EHh"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
