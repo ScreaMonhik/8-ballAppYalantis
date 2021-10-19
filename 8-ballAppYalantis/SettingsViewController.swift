@@ -7,6 +7,11 @@
 
 import UIKit
 
+struct ButtonStatement {
+    var isSelected: Bool
+    var title: String
+}
+
 enum BallAnswers: String, CaseIterable {
     case answer1 = "Ball says yes"
     case answer2 = "Ball doesn't like it"
@@ -16,13 +21,41 @@ enum BallAnswers: String, CaseIterable {
 }
 
 class SettingsViewController: UIViewController {
-
+    
+    var buttonsStatementCallback: (([ButtonStatement]) -> ())?
+    var buttonsStatements = [ButtonStatement]()
+    
     // MARK: - Outlets
     @IBOutlet var buttons: [AnswerButton]!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setupButtons()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
+        buttonsStatements.forEach {
+            for count in 0..<buttons.count {
+                if $0.title == buttons[count].titleLabel?.text {
+                    buttons[count].isSelected = true
+                }
+            }
+        }
+        buttonsStatements.removeAll()
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(true)
+        buttons.forEach {
+            guard let title = $0.titleLabel?.text else { return }
+            if $0.isSelected {
+                let statements = ButtonStatement(isSelected: $0.isSelected, title: title)
+                buttonsStatements.append(statements)
+            }
+        }
+        buttonsStatementCallback?(buttonsStatements)
+        print(buttonsStatements)
     }
     
     // MARK: - Actions
