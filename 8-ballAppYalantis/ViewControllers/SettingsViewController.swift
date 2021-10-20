@@ -55,7 +55,6 @@ class SettingsViewController: UIViewController {
             }
         }
         buttonsStatementCallback?(buttonsStatements)
-        print(buttonsStatements)
     }
     
     // MARK: - Actions
